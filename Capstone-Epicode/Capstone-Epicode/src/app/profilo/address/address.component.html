@@ -1,0 +1,228 @@
+<div class="container my-5 py-5">
+  <h1 class="text-center">ADDRESS SETTINGS</h1>
+  <div class="my-5 py-5">
+    <div class="row">
+      <div class="col-md-4 mx-auto">
+        <div class="form">
+          <form
+            #addressForm="ngForm"
+            class="form"
+            (ngSubmit)="addressForm.form.valid && onSubmit()"
+            novalidate
+          >
+            <div class="form-group my-3">
+              <label>Firstname</label>
+              <input
+                type="text"
+                name="firstname"
+                #firstname="ngModel"
+                class="form-control"
+                [(ngModel)]="user.firstname"
+                placeholder="Firstname"
+                required
+              />
+            </div>
+            <!-- <span
+              class="text-danger"
+              *ngIf="(firstname.touched || addressForm.submitted) && firstname.errors?.['required']"
+            >
+              Firstname is required
+            </span> -->
+            <div
+              class="alert alert-danger"
+              *ngIf="(firstname.touched || addressForm.submitted) && firstname.errors?.['required']"
+              role="alert"
+            >
+              Firstname is required
+            </div>
+            <div class="form-group my-3">
+              <label>Lastname</label>
+              <input
+                type="text"
+                name="lastname"
+                #lastname="ngModel"
+                class="form-control"
+                [(ngModel)]="user.lastname"
+                placeholder="Lastname"
+                required
+              />
+            </div>
+            <!-- <span
+              class="text-danger"
+              *ngIf="(lastname.touched || addressForm.submitted) && lastname.errors?.['required']"
+            >
+              Lastname is required
+            </span> -->
+            <div
+              class="alert alert-danger"
+              *ngIf="(lastname.touched || addressForm.submitted) && lastname.errors?.['required']"
+              role="alert"
+            >
+              Lastname is required
+            </div>
+            <div class="form-group my-3">
+              <label>Email</label>
+              <input
+                type="email"
+                name="email"
+                #email="ngModel"
+                class="form-control"
+                [(ngModel)]="user.email"
+                placeholder="Email"
+                required
+                email
+              />
+            </div>
+            <!-- <span
+              class="text-danger"
+              *ngIf="(email.touched || addressForm.submitted) && email.errors?.['required']"
+            >
+              Email is required
+            </span>
+            <span
+              class="text-danger"
+              *ngIf="email.touched && email.errors?.['email']"
+            >
+              Enter a valid email address
+            </span> -->
+            <div
+              class="alert alert-danger"
+              *ngIf="(email.touched || addressForm.submitted) && email.errors?.['required']"
+              role="alert"
+            >
+              Email is required
+            </div>
+            <div
+              class="alert alert-danger"
+              *ngIf="email.touched && email.errors?.['email']"
+              role="alert"
+            >
+              Enter a valid email address
+            </div>
+            <div class="form-group my-3">
+              <label>State</label>
+              <input
+                type="text"
+                name="state"
+                #state="ngModel"
+                class="form-control"
+                [(ngModel)]="user.address.State"
+                placeholder="State"
+                required
+              />
+            </div>
+            <!-- <span
+              class="text-danger"
+              *ngIf="(state.touched || addressForm.submitted) && state.errors?.['required']"
+            >
+              State is required
+            </span> -->
+            <div class="alert alert-danger" *ngIf="(state.touched || addressForm.submitted) && state.errors?.['required']" role="alert">
+              State is required
+            </div>
+            <div class="form-group my-3">
+              <label>Country</label>
+              <input
+                type="text"
+                name="country"
+                #country="ngModel"
+                class="form-control"
+                [(ngModel)]="user.address.Country"
+                placeholder="Country"
+                required
+              />
+            </div>
+            <!-- <span
+              class="text-danger"
+              *ngIf="(country.touched || addressForm.submitted) && country.errors?.['required']"
+            >
+              Country is required
+            </span> -->
+            <div class="alert alert-danger" *ngIf="(country.touched || addressForm.submitted) && country.errors?.['required']" role="alert">
+              Country is required
+            </div>
+            <div class="form-group my-3">
+              <label>City</label>
+              <input
+                type="text"
+                name="city"
+                #city="ngModel"
+                class="form-control"
+                [(ngModel)]="user.address.City"
+                placeholder="City"
+                required
+              />
+            </div>
+            <!-- <span
+              class="text-danger"
+              *ngIf="(city.touched || addressForm.submitted) && city.errors?.['required']"
+            >
+              City is required
+            </span> -->
+            <div class="alert alert-danger" *ngIf="(city.touched || addressForm.submitted) && city.errors?.['required']" role="alert">
+              City is required
+            </div>
+            <div class="form-group my-3">
+              <label>ZipCode</label>
+              <input
+                type="text"
+                name="zipcode"
+                #zipcode="ngModel"
+                class="form-control"
+                [(ngModel)]="user.address.ZipCode"
+                placeholder="ZipCode"
+                required
+              />
+            </div>
+            <!-- <span
+              class="text-danger"
+              *ngIf="(zipcode.touched || addressForm.submitted) && zipcode.errors?.['required']"
+            >
+              ZipCode is required
+            </span> -->
+            <div class="alert alert-danger" *ngIf="(zipcode.touched || addressForm.submitted) && zipcode.errors?.['required']" role="alert">
+              ZipCode is required
+            </div>
+            <div class="form-group my-3">
+              <label>Street</label>
+              <input
+                type="text"
+                name="street"
+                #street="ngModel"
+                class="form-control"
+                [(ngModel)]="user.address.Street"
+                placeholder="Street"
+                required
+              />
+            </div>
+            <!-- <span
+              class="text-danger"
+              *ngIf="(street.touched || addressForm.submitted) && street.errors?.['required']"
+            >
+              Street is required
+            </span> -->
+            <div class="alert alert-danger" *ngIf="(street.touched || addressForm.submitted) && street.errors?.['required']" role="alert">
+              Street is required
+            </div>
+            <div class="text-center">
+              <button
+                type="submit"
+                [disabled]="!addressForm.form.valid"
+                class="btn btn-primary send-button tx-tfm rounded-pill"
+                (click)="editUser()"
+              >
+                Update
+              </button>
+              <button
+                class="btn btn-dark send-button tx-tfm rounded-pill"
+                [routerLink]="['/account']"
+              >
+                Back
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

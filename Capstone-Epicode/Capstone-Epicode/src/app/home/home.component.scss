@@ -1,0 +1,104 @@
+.headline{
+  background-image: url(https://i.picsum.photos/id/306/1024/768.jpg?hmac=rXix18Pn1poetHRHwu28zu8hUP0KobfXP28uQgomRAI);
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size: cover;
+  position: relative;
+  height:40rem;
+  .container{
+    position: relative;
+    color:white;
+    top: 55%;
+    right:5%;
+    padding-left:10px;
+    padding-right:10px;
+    margin-left:auto;
+    margin-right:auto;
+    
+}
+  .btn-primary {
+    color: white;
+    background-color: #748DA6;
+    border-color: #748DA6;
+    font-weight: bold;
+    font-size: x-large;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    &:hover {
+      color: #748DA6;
+      background-color: white;
+      border-color: #748DA6;
+      box-shadow: 0px 5px 10px#6a8aaa;
+      transform: translateY(-3px);
+    }
+  }
+}
+.div-title{
+  margin: 5px 0;
+  border: 1px solid #4d6073;
+  background-color: #748DA6;
+  color: white;
+  
+}
+.container.marketing{
+  margin-top: 5rem;
+}
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  img{
+    width: 140px;
+    height: 140px;
+  }
+  .btn-secondary {
+    color: white;
+    background-color: #748DA6;
+    border-color: #748DA6;
+    font-weight: bold;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    &:hover {
+      color: #748DA6;
+      background-color: white;
+      border-color: #748DA6;
+      box-shadow: 0px 5px 10px#748DA6;
+      transform: translateY(-3px);
+    }
+  }
+}
+
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+  img{
+    width: 140px;
+    height: 140px;
+  }
+}
+.featurette-divider {
+  margin: 5rem 0;
+}
+
+
+.featurette-heading {
+  letter-spacing: -.05rem;
+}
+
+@media (min-width: 40em) {
+  
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
